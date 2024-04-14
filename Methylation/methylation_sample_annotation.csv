@@ -1,0 +1,15 @@
+SampleID,Model,Treatment
+v1,PDX1,control
+v2,PDX1,control
+v3,PDX1,control
+v5,PDX1,f1_aza
+v11,PDX1,f1_aza
+v6,PDX1,f2_aza
+v4,PDX2,control
+v9,PDX2,control
+v10,PDX2,control
+v12,PDX2,f1_aza
+v13,PDX2,f2_aza
+v14,PDX2,f2_aza
+v15,PDX2,f2_aza
+v16,PDX2,f2_aza
