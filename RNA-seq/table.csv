@@ -1,0 +1,7 @@
+"","names","donor","condition",
+"control_S0_L001_quant","control_S0_L001_quant","NEG","A_control"
+"control_S64_L001_quant","control_S64_L001_quant","NEG","A_control"
+"control_S40_L001_quant","control_S40_L001_quant","NEG","A_control"
+"case_S110_L001_quant","case_S110_L001_quant","POS","B_case"
+"case_S65_L001_quant","case_S65_L001_quant","POS","B_case"
+"case_S52_L001_quant","case_S52_L001_quant","POS","B_case"
