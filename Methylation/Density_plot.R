@@ -1,0 +1,16 @@
+library(tidyverse)
+library(lumi)
+library(minfi)
+library(RColorBrewer)
+
+load("van_Methylation.Rda")
+methylation_sample_annotation  <- read.csv("methylation_sample_annotation.csv")
+vanSampleInfo_PDX2   <- tail(methylation_sample_annotation,8)
+vanSampleInfo_PDX2_f2   <- vanSampleInfo_PDX2[-c(4),]  ## Only contain control and f2_aza treated
+vanMethData_PDX2_f2  <- vanMethData %>% select(4,8,9,12:15)
+colnames(vanMethData_PDX2_f2) <- c("Control_1", "Control_2", "Control_3", "f2_Aza_1", "f2_Aza_2", "f2_Aza_3", "f2_Aza_4" )
+beta_value_Matrix_vanMethData_PDX2_f2 <- as.matrix(vanMethData_PDX2_f2)
+pdf("PDX2_f2_study_beta_value.pdf") 
+densityPlot(beta_value_Matrix_vanMethData_PDX2_f2, sampGroups=vanSampleInfo_PDX2_f2$Treatment, main="Beta values", legend=FALSE, xlab="Beta values")
+legend("topright", legend = levels(factor(vanSampleInfo_PDX2_f2$Treatment)),text.col=brewer.pal(8,"Dark2"))
+dev.off() 
