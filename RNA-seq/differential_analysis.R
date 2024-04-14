@@ -54,11 +54,11 @@ res <- res[order(res$pvalue),]
 res
 summary(res)
 mcols(res, use.names = TRUE)
-write.table(res, file="result_RNA_POS_NEG.csv", sep=",", row.names=TRUE)
+write.table(res, file="result_RNA_control_case.csv", sep=",", row.names=TRUE)
 ens.str <- substr(rownames(res), 1, 15)
 res$symbol <- mapIds(org.Hs.eg.db, keys=ens.str, column="SYMBOL", keytype="ENSEMBL", multiVals="first")
 res$entrez <- mapIds(org.Hs.eg.db, keys=ens.str, column="ENTREZID", keytype="ENSEMBL", multiVals="first")
 resOrdered <- res[order(res$pvalue),]
 head(resOrdered)
 resOrderedDF <- as.data.frame(resOrdered)
-write.csv(resOrderedDF, file = "With_annotation_result_RNA_POS_NEG.csv")
+write.csv(resOrderedDF, file = "With_annotation_result_RNA_control_case.csv")
