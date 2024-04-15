@@ -1,4 +1,4 @@
-# ajaykumarsaw-BRAFV600E-mutated-CRC-Project
+# BRAFV600E-mutated-CRC-Project
 
 Code/scripts for the analysis of BRAFV600E mutated CRC Project related datasets
 
